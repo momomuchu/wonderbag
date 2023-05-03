@@ -347,7 +347,7 @@ while True:
             pass
     driver.switch_to.window(original_tab)
     try:
-        driver.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div/div[5]/div[1]/nav/div[6]/a').click()
+        driver.find_element(By.CSS_SELECTOR, 'a[data-testid="pagination-page-next"]').click()
     except:
         index_emploi+=1
         driver.get('https://fr.indeed.com/jobs?q='+keywords[index_emploi])
