@@ -19,5 +19,6 @@ print(username, password)
 start_linkedin(username, password)
 body = driver.find_element_by_tag_name('body')
 body.send_keys(Keys.CONTROL + '-')
+
 ApplyOnJob('data engineer')
 
