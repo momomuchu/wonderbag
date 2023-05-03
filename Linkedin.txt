@@ -1,0 +1,66 @@
+Etape Candidaturer 
+
+Etape1
+Selectionner la La div pour postuler:
+
+const div = document.querySelector('div[data-test-modal][role="dialog"]')
+
+Etape2 :
+avoir le label de chaque input/select :
+
+const labels = div.querySelectorAll('label');
+labels.forEach(label => { 
+  console.log(label.nextElementSibling, label.textContent);
+});
+#faire if label.textContent==phone and label.nextElementSibling is input tag
+
+
+Etape 3 :
+Le CV choisir:
+div.querySelector('button[aria-label="Choisir un CV"]').click();
+Etape3.1:
+Cover Letter:
+w
+wd
+Etape 2.5 et 3.5:
+cliquer su rsuivant:
+div.querySelector('button[aria-label="Passez à l’étape suivante"]').click();
+
+
+Etape 4:
+question type radio :
+
+
+
+Etape importante:
+permet d'avoir tout les buttons important
+div.querySelector('label[data-test-text-selectable-option__label="No"]').click()
+div.querySelectorAll('button[id^="ember"]').forEach( button => console.log(button.textContent))
+
+
+Etape final :
+
+Click sur verifier
+#document car il nest aps dans div
+verifier
+document.querySelector('#ember926').click();
+envoyer
+document.querySelector('#ember936').click();
+
+quitter
+document.querySelector('#ember960').click();
+
+
+
+Etape Loop Chaque Job
+
+Etape1:
+clicker sur tout les job
+
+
+ document.querySelectorAll('[data-job-id]').forEach( e => e.click())
+Etape 2 :
+
+clicker sur candidature simplifier
+
+document.querySelector('#ember1069').click();
