@@ -246,9 +246,11 @@ def button_handler():
 def ApplyEveryTab(driver,original_tab):
     driver.switch_to.window(original_tab)
     tabs=driver.window_handles
-    for i in range(6):
+    for i in range(8):
+        
         for tab in tabs:
             if tab!=original_tab:
+                
                 driver.switch_to.window(tab)
                 try:
                     increment_all_number_inputs()
@@ -278,6 +280,7 @@ def ApplyEveryTab(driver,original_tab):
                         input_element.click()
                 except:
                     pass
+                time.sleep(1)
 
 #ApplyEveryTab(driver,original_tab)
 driver.get('https://fr.indeed.com/jobs?q=développeur&l=&from=searchOnHP&vjk=4746db09ee7ac3f9')
