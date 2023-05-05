@@ -285,7 +285,7 @@ def ApplyEveryTab(driver,original_tab):
                 time.sleep(1)
 
 #ApplyEveryTab(driver,original_tab)
-driver.get('https://fr.indeed.com/jobs?q=développeur&l=&from=searchOnHP&vjk=4746db09ee7ac3f9')
+#driver.get('https://fr.indeed.com/jobs?q=développeur&l=&from=searchOnHP&vjk=4746db09ee7ac3f9')
 import time
 
 def login( email, password):
