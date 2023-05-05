@@ -252,6 +252,8 @@ def ApplyEveryTab(driver,original_tab):
             if tab!=original_tab:
                 
                 driver.switch_to.window(tab)
+                if "post" in driver.current_url:
+                    continue
                 try:
                     increment_all_number_inputs()
 
