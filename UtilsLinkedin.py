@@ -284,6 +284,13 @@ def ApplyEasy():
     Stack=[]
     while True:
         try:
+            phoneNumberInput = driver.find_element_by_css_selector('input[id*="phoneNumber"]')
+            phoneNumberInput.clear()
+
+            phoneNumberInput.send_keys("0778905357")
+        except:
+            pass
+        try:
             logger.info("Calling button_handler function...")
             button_handler()
         except:
