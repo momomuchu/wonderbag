@@ -1,24 +1,149 @@
 import argparse
 from UtilsLinkedin import *
 # Create the argument parser
-parser = argparse.ArgumentParser(description='Process login credentials')
 
-# Add the username argument
-parser.add_argument('username', type=str, help='the username')
-
-# Add the password argument
-parser.add_argument('password', type=str, help='the password')
-
-# Parse the arguments
-args = parser.parse_args()
-
+keywordsT= [
+    # Data Science
+    "Machine learning",
+    "Deep learning",
+    "Neural networks",
+    "Natural language processing",
+    "Data mining",
+    "Data analysis",
+    "Data visualization",
+    "Statistics",
+    "Predictive modeling",
+    "Artificial intelligence",
+    "Big data",
+    "Business intelligence",
+    "Hadoop",
+    "Spark",
+    "SQL",
+    "Python",
+    "Scikit-learn",
+    "TensorFlow",
+    "Keras",
+    "PyTorch",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "NLTK",
+    "SpaCy",
+    "Gensim",
+    "XGBoost",
+    "LightGBM",
+    "CatBoost",
+    "AutoML",
+    "Data Engineering",
+    "ETL",
+    "Data warehousing",
+    "Data pipelines",
+    "Database administration",
+    "Data architecture",
+    "Data modeling",
+    "Data integration",
+    "Data quality",
+    "Data governance",
+    "Cloud computing",
+    "AWS",
+    "Azure",
+    "Google Cloud Platform",
+    "Microsoft Azure",
+    "Amazon Web Services",
+    "Cloud security",
+    "Cloud architecture",
+    "Cloud migration",
+    "Cloud deployment",
+    "Serverless computing",
+    "Virtual machines",
+    "Containers",
+    "Kubernetes",
+    "Infrastructure as Code",
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "jQuery",
+    "React",
+    "AngularJS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL",
+    "Django",
+    "Flask",
+    "Bootstrap",
+    "RESTful APIs",
+    "GCP",
+    "React Native",
+    "TypeScript",
+    "Android",
+    "iOS",
+    "Kotlin",
+    "Swift",
+    "Objective-C",
+    "Firebase",
+    "Mobile app development",
+    "Data Analyst",
+    "Data Quality Analyst",
+    "Data Architect",
+    "Machine Learning Researcher",
+    "Artificial Intelligence Researcher",
+    "Data Analysis Consultant",
+    "Data Scientist",
+    "Machine Learning Developer",
+    "Artificial Intelligence Software Developer",
+    "Data Visualization Expert",
+    "Data Engineer",
+    "Machine Learning Engineer",
+    "Big Data Specialist",
+    "Natural Language Processing Specialist",
+    "Statistician",
+    "Data Platform Designer",
+    "Data Pipeline Developer",
+    "Data Processing Software Developer",
+    "Database Systems Developer",
+    "Information Systems Developer",
+    "Deep Learning Engineer",
+    "Neural Networks Engineer",
+    "AutoML Expert",
+    "Machine Learning Model Developer",
+    "Deep Learning Model Developer",
+    "Développeur Angular",
+    "Développeur API RESTful",
+    "Développeur AWS",
+    "Développeur Azure",
+    "Développeur Bootstrap",
+    "Développeur CSS",
+    "Développeur de sites Web",
+    "Développeur Django",
+    "Développeur Express.js",
+    "Développeur Flask",
+    "Développeur GCP",
+    "Développeur HTML",
+    "Développeur JavaScript",
+    "Développeur jQuery",
+    "Développeur MongoDB",
+    "Développeur MySQL",
+    "Développeur Node.js",
+    "Développeur PostgreSQL",
+    "Développeur React"]
 # Access the username and password values
-username = args.username
-password = args.password
+username = "@gmail.com"
+password = ""
 print(username, password)
 start_linkedin(username, password)
 body = driver.find_element_by_tag_name('body')
 body.send_keys(Keys.CONTROL + '-')
-
-ApplyOnJob('data engineer')
+sleep(10)
+for job in keywords:
+    try:
+        ApplyOnJob(job)
+        ApplyOnJob(f"'{job}'")
+    except:
+        continue
 
