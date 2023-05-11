@@ -140,10 +140,11 @@ start_linkedin(username, password)
 body = driver.find_element_by_tag_name('body')
 body.send_keys(Keys.CONTROL + '-')
 sleep(10)
-for job in keywords:
-    try:
-        ApplyOnJob(job)
-        ApplyOnJob(f"'{job}'")
-    except:
-        continue
+while True:
+    for job in keywords:
+        try:
+            ApplyOnJob(job)
+            ApplyOnJob(f"'{job}'")
+        except:
+            continue
 
